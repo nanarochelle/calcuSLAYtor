@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>calcuSLAYtor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="calculator">
+    <input type="text" placeholder="0" id="inputBox" class="placeholder">
+    <div>
+      <button class="number" onclick="
+      buttonResult ('7');
+      ">7</button>
+      <button class="number" onclick="
+      buttonResult ('8');
+      ">8</button>
+      <button class="number" onclick="
+      buttonResult ('9');
+      ">9</button>
+      <button class="delete" onclick="
+      nanaDelete();
+      "><b>DEL</b></button>
+      <button class="deleteAll" onclick="
+   
+      showingNumber();
+      
+      function showingNumber() {
+      document.getElementById('inputBox').value = '';
+      }
+      "><b>AC</b></button>
+    </div>
+    <div>
+      <button class="number" onclick="
+      buttonResult ('4');
+      ">4</button>
+      <button class="number" onclick="
+      buttonResult ('5');
+      ">5</button>
+      <button class="number" onclick="
+      buttonResult ('6');
+      ">6</button>
+      <button class="operator" onclick="
+      buttonResult ('*');
+      ">*</button>
+      <button class="operator" onclick="
+      buttonResult ('/');
+      ">/</button>
+    </div>
+    <div>
+      <button class="number" onclick="
+      buttonResult ('1');
+      ">1</button>
+      <button class="number" onclick="
+      buttonResult ('2');
+      ">2</button>
+      <button class="number" onclick="
+      buttonResult ('3');
+      ">3</button>
+      <button class="operator" onclick="
+      buttonResult ('+');
+      ">+</button>
+      <button class="operator" onclick="
+      buttonResult ('-');
+      ">-</button>
+    </div>
+    <div>
+      <button class="number" onclick="
+      buttonResult ('0');
+      ">0</button>
+      <button class="number" onclick="
+      buttonResult ('.');
+      ">.</button>
+      <button class="equal" onclick="
+      document.getElementById('inputBox').value = eval(document.getElementById('inputBox').value);
+      "><b>=</b></button>
+  
+    </div>
+   
+  </div>
+  <script>
+  let nanaDelete = function () {
+    let inputShow = document.getElementById('inputBox').value; 
+    document.getElementById('inputBox').value = inputShow.substring(0,inputShow.length -1);
+  }
+  
+    function buttonResult(buttonClick) {
+      if (buttonClick === '7') {
+        document.getElementById('inputBox').value += '7';
+      }
+    else if (buttonClick === '8') {
+        document.getElementById('inputBox').value += '8';
+      }
+    else if (buttonClick === '9') {
+        document.getElementById('inputBox').value += '9';
+      }
+    else if (buttonClick === '4') {
+        document.getElementById('inputBox').value += '4';
+    }
+    else if (buttonClick === '5') {
+        document.getElementById('inputBox').value += '5';
+    }
+    else if (buttonClick === '6') {
+        document.getElementById('inputBox').value += '6';
+    }
+    else if (buttonClick === '3') {
+        document.getElementById('inputBox').value += '3';
+    }
+    else if (buttonClick === '2') {
+        document.getElementById('inputBox').value += '2';
+    }
+    else if (buttonClick === '1') {
+        document.getElementById('inputBox').value += '1';
+    }
+    else if (buttonClick === '0') {
+        document.getElementById('inputBox').value += '0';
+    }
+    else if (buttonClick === '.') {
+        document.getElementById('inputBox').value += '.';
+    }
+    else if (buttonClick === '+') {
+        document.getElementById('inputBox').value += '+';
+    }
+    else if (buttonClick === '-') {
+        document.getElementById('inputBox').value += '-';
+    }
+    else if (buttonClick === '/') {
+        document.getElementById('inputBox').value += '/';
+    }
+    else if (buttonClick === '*') {
+        document.getElementById('inputBox').value += '*';
+    }
+    
+    }
+    
+  </script>
+</body>
+</html>
